@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="weather">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false" id="typesearch">
+            <button><svg class="icons searchbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+
+        </div>
+        <div class="weatherappwriteup">
+            <div class="Horizontal">
+                <svg class="icons plus_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+    
+                <div class="city">Abuja</div>
+            
+                <svg class="icons threedots" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/></svg>
+            </div>
+            <div class="Vertical">
+                <div class="temp">30&deg;C</div>
+                <div class="lifejustfunny">
+                    <div>Clear</div>
+                    <div class="airhumidity">
+                        <button type="button"><svg class="icons aqi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></svg>Feels Like <span class="feels_like"></span>  </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        body{
+        background-image: url('./images_weather_app/weather\ app\ pic-2.jpeg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center; 
+        }
+       .search{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+        margin-left: 8px;
+       
+       }
+       .search input{
+           border: 0;
+           outline: 0;
+           padding: 10px 25px;
+           height: 30px;
+           border-radius: 30px;
+           flex:1;
+           margin-right: 16px;
+           font-size:18px;
+        }
+        .search button .icons{
+            border: 0;
+           outline: 0;
+           border-radius: 100%;
+           width:60px;
+           height:36px;
+           cursor:pointer;
+        }
+        .Horizontal{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: row;
+            gap: 90px;
+            margin-bottom:50px;
+            margin-top: 120px;
+            /* margin-bottom: 20px; */
+        }
+        .Vertical{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            font-weight: bolder;
+            color: white;
+            margin-left: 80px;
+            /* margin-bottom: 20px; */
+        }
+        .city{
+            font-weight: bolder;
+            font-size: 40px;
+            color: white;
+
+        }
+        .icons{
+            width: 40px;
+            height:40px;
+            fill:white;
+            cursor: pointer;
+        }
+       .temp{
+        font-weight: bolder;
+        font-size: 100px;
+       }
+       .lifejustfunny{
+        margin-left: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+       }
+       button{
+        position: relative;
+        right:20px;
+        border-radius: 30px;
+        border-style: none;
+        background-color: lightblue;
+        color: white;
+        width:fit-content;
+        padding: 6px;
+        cursor:pointer;
+       }
+     .aqi{
+        width:fit-content;
+        height: 14px;
+        /* padding: 5px 10px; */
+        margin-inline: auto;
+        /* margin-right: 100px; */
+     }
+
+     @media(max-width:640px){
+        .Horizontal{
+           padding: 0 15px;
+           margin-left: 5px;
+        }
+        .icons{
+            width: 30px;
+            height:30px;
+            fill:white;
+            cursor: pointer;
+        }
+        .aqi{
+        width:fit-content;
+        height: 16px;
+        margin-inline: auto;
+     }
+     .search{
+        width:10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+        margin-left: 17px;
+     }
+       
+     /* .search input{
+            width: 10px;
+           border: 0;
+           outline: 0;
+           padding: 10px 25px;
+           height: 30px;
+           border-radius: 30px;
+           flex:1;
+           margin-right: 16px;
+           font-size:18px;
+        } */
+        
+}
+
+    
+    
+      
+    </style>
+
+
+<script>
+
+const apiKey = "5c4c61236575ae1d98a390c9356c49d6";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button .icons");
+
+// async function checkWeather(city){
+//     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+//     var data = await response.json();
+
+//     console.log(data);
+
+//     document.querySelector(".city").innerHTML = data.name;
+//     document.querySelector(".temp").innerHTML = Math.round( data.main.temp) + "&deg;C";
+// }
+function checkWeather(city){
+    fetch(apiUrl + city + `&appid=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+
+            document.querySelector(".city").innerHTML = data.name;
+            
+            document.querySelector(".temp").innerHTML = Math.round( data.main.temp) + "&deg;C";
+            
+            document.querySelector(".feels_like").innerHTML = Math.round( data.main.feels_like);
+        })
+        .catch(error => {
+            console.error('Error:', error)
+            // alert('Network Error, please check your internet and refresh the page.')
+        });
+    
+   
+}
+
+
+searchBtn.addEventListener("click" , ()=>{
+    checkWeather(searchBox.value);
+})
+
+checkWeather("Abuja");
+</script>
+</body>
+</html>
